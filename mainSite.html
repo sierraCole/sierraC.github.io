@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Site — Home</title>
+  <style>
+    body {
+      background: linear-gradient(#d8e5db 0%, #f9e9e8 100%);
+      font-family: "Trebuchet MS", cursive;
+      color: #3a574c;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .window {
+      background-color: #f9e9e8;
+      border: 2px solid #a86b79;
+      border-top: none;
+      width: 650px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* --- TITLE BAR --- */
+    .titlebar {
+      background: linear-gradient(90deg, #c3949e 0%, #a86b79 100%);
+      color: white;
+      font-weight: bold;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .window-controls {
+      display: flex;
+      gap: 6px;
+    }
+
+    .window-btn {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ffffffaa;
+      border: 1px solid rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    /* --- MAIN CONTENT AREA --- */
+    .content {
+      display: flex;
+      padding: 0;
+      background-color: #e9f1ec;
+      border-top: 1px solid #c3949e;
+    }
+
+    /* --- SIDEBAR --- */
+    nav {
+      width: 160px;
+      background-color: #d8e5db;
+      border-right: 2px solid #c3949e;
+      padding: 20px 10px;
+      box-sizing: border-box;
+    }
+
+    nav h3 {
+      font-size: 14px;
+      color: #3a574c;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      text-align: center;
+      background-color: #c3949e33;
+      border-radius: 6px;
+      padding: 4px;
+    }
+
+    nav a {
+      position: relative;
+      display: block;
+      background: linear-gradient(180deg, #c3949e 0%, #a86b79 90%);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin: 10px 0;
+      text-align: center;
+      box-shadow: 0 3px 0 #3a574c, 0 0 10px rgba(195, 148, 158, 0.4);
+      transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+      overflow: hidden;
+    }
+
+    nav a:hover {
+      transform: scale(1.08);
+      background: linear-gradient(180deg, #a86b79 0%, #c3949e 100%);
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -60px;
+      width: 40px;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.7) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-20deg);
+      opacity: 0.6;
+    }
+
+    nav a:hover::after {
+      animation: shine 0.7s ease-in-out 1;
+    }
+
+    @keyframes shine {
+      from { left: -60px; }
+      to { left: 130%; }
+    }
+
+    /* --- MAIN PANEL --- */
+    main {
+      flex: 1;
+      padding: 30px;
+    }
+
+    main h1 {
+      font-size: 24px;
+      color: #3a574c;
+      background-color: #c3949e33;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    main p {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    main ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    main li {
+      margin: 10px 0;
+    }
+
+    main a {
+      color: #a86b79;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    main a:hover {
+      color: #c3949e;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="window">
+    <div class="titlebar">
+      <span>My Site — Home</span>
+      <div class="window-controls">
+        <div class="window-btn"></div>
+        <div class="window-btn"></div>
+        <div class="window-btn"></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <nav>
+        <h3>Navigation</h3>
+        <a href="https://sierrac.github.io/A-Frame/index.html">A-Frame</a>
+      </nav>
+
+      <main>
+        <h1>Welcome to My Main Hub</h1>
+        <p>This is where you'll find my projects!</p>
+        <ul>
+          <li><a href="https://sierrac.github.io/A-Frame/index.html">A-Frame</a></li>
+        </ul>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
